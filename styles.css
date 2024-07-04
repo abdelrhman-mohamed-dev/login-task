@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+/* global styles */
+
+.stroke-text {
+    color: #1C1C1C;
+    font-weight: bold;
+}
+
+/* layout */
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-section, .promo-section {
+    flex: 1;
+    width: 50%;
+    
+}
+
+/* login section - left section */
+
+.login-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.login-section h1 { 
+    font-size: 48px;
+    color: #000;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.login-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #525252;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group input {    
+    width: 300px;
+    height: 52px;
+    padding: 10px 10px 10px 40px; 
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+    background-color: #F0EDFF;
+}
+.input-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888888;
+    pointer-events: none;
+}
+
+
+.input-group input::placeholder {
+    color: #1C1C1C;
+
+    font-family: 'Poppins', sans-serif;
+}
+.login-btn {   
+    width: 124px;
+    height: 52px;
+    margin: 10px 0;
+    padding: 10px;
+    background: #9181f4;
+    background: -webkit-linear-gradient(110deg, #9181f4 0%, #5038ed 100%);
+    background: linear-gradient(110deg, #9181f4 0%, #5038ed 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #F0EDFF;
+}
+
+.line-text {
+    color: #525252;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+.social-login p {
+    margin-bottom: 10px;
+    color: #888888;
+}
+
+.google-login, .facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 364px;
+    height: 52px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #F0EDFF;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* promo section - right section  */
+
+.promo-section {
+    background: url(./img/bg.png) no-repeat center center / cover;
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.promo-section .blur {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 588px;
+    height: 80%;
+    max-height: 700px;
+    background-color: #fff;
+    color: #fff;
+    opacity: 0.2;
+    border-radius: 50px;
+}
+.promo-section  h2 {
+    position: absolute;
+    width: 350px;
+    text-align:left;
+    line-height: 65px;
+    top: 15%;
+    left: 25%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.promo-section .logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+}
+.promo-section .women {
+    object-fit: cover;
+    scale: 1.3;
+    position: absolute;
+    bottom: 20%;
+    right: 18%;
+    z-index: 999;
+}
+
+/* responsive design */
+
+@media (max-width: 1280px) {
+    .promo-section h2 {
+    top: 15%;
+    left: 20%;
+    }
+
+    .promo-section .logo {
+        bottom: 15%;
+        left: 4%;
+    }
+
+    .promo-section .women {
+        width: 100%;
+        bottom: 18%;
+        right: 8%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .promo-section  {
+        display: none;
+    }
+    
+}
